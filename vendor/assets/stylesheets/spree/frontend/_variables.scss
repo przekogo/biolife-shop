@@ -1,0 +1,46 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css?family=Cinzel:400,700');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic&subset=latin,latin-ext');
+
+$cinzel: 'Cinzel', serif;
+$josefin: 'Josefin Slab', serif;
+
+// color definitions
+$light-brown: #d2b37a;
+$dark-brown: #200e0a;
+$mahogany: #771b15;
+$white: #fff;
+$black: #000;
+
+// main colors
+$primary-color: $light-brown;
+$secondary-color: $dark-brown;
+$tertiary-color: $mahogany;
+
+// bootstrap variable overrides
+// brand colors
+$brand-primary: $primary-color;
+$brand-secondary: $secondary-color;
+$brand-tertiary: $tertiary-color;
+$brand-success:  $dark-brown;
+
+// font
+$font-family-base:  $josefin !default;
+$font-size-base:  16px !default;
+
+$headings-font-family:  $cinzel !default;
+
+// text colors
+$text-color:  $dark-brown !default;
+$link-color:  $mahogany !default;
+
+// inputs
+$input-border-focus: $tertiary-color;
+
+//** Background color on `.list-group-item`
+$list-group-bg:                 $light-brown !default;
+//** `.list-group-item` border color
+$list-group-border:             $white !default;
+
+//** Background color of single list items on hover
+$list-group-hover-bg:           $white !default;

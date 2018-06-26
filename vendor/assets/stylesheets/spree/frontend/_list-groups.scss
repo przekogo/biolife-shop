@@ -1,0 +1,20 @@
+a.list-group {
+
+  &-item {
+    color: $dark-brown;
+    transition: .4s margin, .7s background-color;
+
+    &:hover {
+      margin-left: 5px;
+      color: $mahogany;
+    }
+
+    &.active, &.active:hover {
+      margin-left: 5px;
+      border-color: $light-brown;
+      border-radius: 3px;
+      background-color: transparent;
+      color: $mahogany;
+    }
+  }
+}
