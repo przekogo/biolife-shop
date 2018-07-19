@@ -10,7 +10,7 @@ gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
-gem 'sassc-rails'
+gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -41,7 +41,7 @@ gem 'spree_gateway', '~> 3.3'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'haml'
 gem 'dotenv-rails'
-gem 'aws-sdk'
+gem 'aws-sdk-s3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
