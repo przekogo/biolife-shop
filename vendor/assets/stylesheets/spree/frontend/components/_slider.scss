@@ -1,21 +1,145 @@
 .rz-slider {
   position: relative;
+  width: 100%;
+  height: calc(100vh - 171px);
+  border-bottom: 4px solid $brand-secondary;
+
+  &__prev, &__next {
+    font-size: 50px;
+    color: rgba($white, .6);
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    padding: 0 5px;
+    height: 100%;
+    background: rgba($light-brown, .15);
+    z-index: 2;
+    transition: all .5s ease;
+
+    &:hover {
+      color: rgba($white, 1);
+      background: rgba($light-brown, .3);
+      cursor: pointer;
+    }
+  }
+
+  &__next {
+    right: 0;
+  }
+
+  &__prev {
+    left: 0;
+  }
 
   &__slide {
+    font-family: $cinzel;
+    font-size: 40px;
+    color: $white;
     display: block;
+    opacity: 0;
     position: absolute;
     top: 0;
     width: 100%;
-    height: calc(100vh - 180px);
+    height: 100%;
     background-position: center;
     background-size: cover;
-    opacity: 0;
-    transition: opacity 4s ease;
+    box-shadow: inset 0px -75px 75px -60px $black;
+    transition: all 1s ease,
+                opacity 1.5s;
+
+    > .text1, .text2, .button {
+      position: absolute;
+      opacity: 0;
+      transition: all 1.5s ease 0s,
+                  opacity 1s ease 0s;
+
+      &.fade-left {
+        margin: 0 -50px 0 50px;
+      }
+
+      &.fade-right {
+        margin: 0 50px 0 -50px;
+      }
+
+      &.fade-up {
+        margin: 50px 0 -50px 0;
+      }
+
+      &.fade-down {
+        margin: -50px 0 50px 0;
+
+      }
+    }
+
+    > .text1 {
+      font-size: 60px;
+      top: 35%;
+      left: 20%;
+      text-shadow: 2px 4px 1px $dark-brown;
+    }
+
+    > .text2 {
+      bottom: 1%;
+      left: 30%;
+      text-shadow: 2px 4px 3px $mahogany;
+    }
+
+    > .button {
+      padding: 5px 10px;
+      top: 60%;
+      left: 50%;
+      color: $brand-primary;
+      background-color: rgba($brand-tertiary, .7);
+      border: 2px solid $brand-primary;
+      border-radius: 10px;
+      box-shadow: 2px 4px 3px $dark-brown;
+
+        &:hover {
+        color: $brand-tertiary;
+        background-color: rgba($brand-primary, .85);
+        border-color: $brand-tertiary;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+        &.inverse {
+          color: $brand-tertiary;
+          background-color: rgba($brand-primary, .7);
+          border-color: $brand-tertiary;
+
+          &:hover {
+            color: $brand-primary;
+            background-color: rgba($brand-tertiary, .7);
+            border-color: $brand-primary;
+          }
+        }
+    }
 
     &.active {
-      position: relative;
       opacity: 1;
-      z-index: 0;
+      z-index: 1;
+      transition: opacity 1.5s ease .5s;
+
+      > .text1 , .text2 , .button {
+        margin: 0;
+        opacity: 1;
+        transition: all 1.5s ease;
+      }
+
+      > .text1 {
+        transition-delay: 1s;
+      }
+
+      > .text2 {
+        transition-delay: 1.8s;
+      }
+
+      > .button {
+        transition: all .4s,
+          margin 1.5s ease 2.6s,
+          opacity 1.5s ease 2.6s;
+      }
     }
   }
 }

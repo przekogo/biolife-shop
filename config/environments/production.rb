@@ -91,4 +91,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  config.middleware.insert_before(Rack::Runtime, Rack::Auth::Basic) do |u, p|
+    u == Rails.application.credentials.rake[:username]
+    p == Rails.application.credentials.rake[:password]
+  end
 end

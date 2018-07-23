@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_15_000704) do
+ActiveRecord::Schema.define(version: 2018_07_19_154319) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,24 @@ ActiveRecord::Schema.define(version: 2018_07_15_000704) do
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+  end
+
+  create_table "slide_buttons", force: :cascade do |t|
+    t.integer "slide_id"
+    t.string "text"
+    t.integer "x_offset", default: 0
+    t.integer "y_offset", default: 0
+  end
+
+  create_table "slide_texts", force: :cascade do |t|
+    t.integer "slide_id"
+    t.string "text"
+    t.integer "x_offset", default: 0
+    t.integer "y_offset", default: 0
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.integer "priority", default: 0
   end
 
   create_table "spree_addresses", id: :serial, force: :cascade do |t|
