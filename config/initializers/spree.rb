@@ -16,6 +16,8 @@ Spree.config do |config|
 
   config.logo = 'logo.png'
   config.currency = 'PLN'
+
+  config.address_requires_state = false
 end
 
 Spree.user_class = "Spree::User"

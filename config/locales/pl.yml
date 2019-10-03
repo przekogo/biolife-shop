@@ -1,0 +1,10 @@
+pl:
+  spree:
+    save_my_address: zapamiętaj mój adres
+    empty_cart: Opróżnij koszyk
+    coupon_code_apply: Aktywuj kod
+    shipping_total: Dostawa
+    no_payment_found: Nie znaleziono płatności
+    adjustment_labels:
+      tax_rates:
+        including_tax: 'W tym %{name} %{amount}'
