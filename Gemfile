@@ -42,7 +42,7 @@ gem 'spree_gateway'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'haml'
 gem 'aws-sdk-s3'
-gem 'spree_przelewy24_integration', '0.1.1', github: 'przekogo/spree_przelewy24_integration'
+gem 'spree_przelewy24_integration', '0.1.2', github: 'przekogo/spree_przelewy24_integration'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
