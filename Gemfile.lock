@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/przekogo/spree_przelewy24_integration.git
-  revision: 519836df5bcb8c9d468e8bb0d2337227f8d05f71
+  revision: dede0bc3831a2da72600124dac50777c3a9f8567
   specs:
-    spree_przelewy24_integration (0.1.2)
+    spree_przelewy24_integration (0.1.5)
       spree_core (>= 3.1.0)
       spree_frontend (>= 3.1.0)
 
@@ -469,7 +469,7 @@ DEPENDENCIES
   spree_auth_devise
   spree_gateway
   spree_i18n!
-  spree_przelewy24_integration (= 0.1.2)!
+  spree_przelewy24_integration (= 0.1.5)!
   spring
   spring-watcher-listen
   turbolinks
