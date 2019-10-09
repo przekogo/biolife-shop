@@ -8,6 +8,7 @@ module Spree
       @products = @searcher.retrieve_products
       @products = @products.includes(:possible_promotions) if @products.respond_to?(:includes)
       @taxonomies = Spree::Taxonomy.includes(root: :children)
+      @categories = Spree::Taxon.where(parent_id: Spree::Taxonomy.find_by(name: 'Kategorie').id)
       @show_slider = true
     end
   end

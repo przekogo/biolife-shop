@@ -28,7 +28,7 @@
       <%= item_form.number_field :quantity, min: 0, class: "form-control line_item_quantity", size: 5 %>
     </td>
     <td class="lead text-primary cart-item-total" data-hook="cart_item_total">
-      <%= line_item.display_amount.to_html unless line_item.quantity.nil? %>
+      <%= line_item.display_amount.to_s.gsub(' ', '&nbsp').html_safe unless line_item.quantity.nil? %>
     </td>
     <td class="cart-item-delete" data-hook="cart_item_delete">
       <%= link_to content_tag(:span, '', class: 'glyphicon glyphicon-minus-sign'), '#', class: 'delete', id: "delete_#{dom_id(line_item)}" %>
