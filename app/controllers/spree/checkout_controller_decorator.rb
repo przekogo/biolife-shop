@@ -1,5 +1,5 @@
 Spree::CheckoutController.class_eval do
-  before_action :set_categories, only: [:registration, :edit]
+  before_action :set_categories, only: [:registration, :edit, :update]
 
   private
 

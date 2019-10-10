@@ -9,3 +9,10 @@ body {
 .table-responsive {
   font-family: $josefin, !important;
 }
+
+.order_complete {
+  padding: 50px 0 50px 0;
+  text-align: center;
+  border: green 1px solid;
+  background: #e3e4a4;
+}

@@ -27,8 +27,11 @@
 
   <% if order.has_step?("payment") %>
     <div class="col-md-3 col-sm-3 col-xs-6" data-hook="order-payment">
-      <h4><%= Spree.t(:payment_information) %> <%= link_to "(#{Spree.t(:edit)})", checkout_state_path(:payment) unless order.completed? %></h4>
+      <h4><%= Spree.t(:payment_information) %></h4>
       <div class="payment-info">
+        <% if order.payments.valid.count == 0 %>
+          Oczekiwanie na potwierdzenie płatności.
+        <% end %>
         <%= render collection: order.payments.valid, partial: 'spree/shared/payment' %>
       </div>
     </div>

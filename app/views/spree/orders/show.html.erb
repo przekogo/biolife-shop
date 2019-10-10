@@ -1,7 +1,7 @@
 <fieldset id="order_summary" data-hook>
   <h1><%= accurate_title %></h1>
-  <% if order_just_completed?(@order) %>
-    <strong><%= Spree.t(:thank_you_for_your_order) %></strong>
+  <% if params["checkout_complete"] == "true" %>
+    <div class='order_complete'><strong><%= Spree.t(:thank_you_for_your_order) %></strong></div>
   <% end %>
 
   <div id="order" data-hook>
@@ -11,7 +11,7 @@
 
     <p data-hook="links">
       <%= link_to Spree.t(:back_to_store), spree.root_path, class: "button" %>
-      <% unless order_just_completed?(@order) %>
+      <% unless params["checkout_complete"] == "true" %>
         <% if try_spree_current_user && respond_to?(:account_path) %>
           <%= link_to Spree.t(:my_account), account_path, class: "button" %>
         <% end %>
