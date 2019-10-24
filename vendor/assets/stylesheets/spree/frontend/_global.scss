@@ -16,3 +16,16 @@ body {
   border: green 1px solid;
   background: #e3e4a4;
 }
+
+.alert {
+  margin-bottom: 0;
+  border: 2px solid;
+  border-radius: 0;
+}
+
+.alert-alert {
+  color: #c40f0f;
+  background-color: #f2cdcd;
+  border-color: #c40f0f;
+  text-align: center;
+}

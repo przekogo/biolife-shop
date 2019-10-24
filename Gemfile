@@ -33,16 +33,16 @@ gem 'jbuilder'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rubyzip', '>= 1.3.0'
-gem 'devise', '>= 4.7.1'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 gem 'spree', '~> 3.7.0'
-gem 'spree_auth_devise'
-gem 'spree_gateway'
+gem 'spree_auth_devise', '~> 3.5'
+gem 'spree_gateway', '~> 3.4'
 gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 gem 'haml'
 gem 'aws-sdk-s3'
-gem 'spree_przelewy24_integration', '0.1.5', github: 'przekogo/spree_przelewy24_integration'
+gem 'spree_przelewy24_integration', '1.0.0', github: 'przekogo/spree_przelewy24_integration', branch: '1.0.0'
+# gem 'spree_przelewy24_integration', path: '/home/kogo/gems/spree_przelewy24_integration'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -11,3 +11,4 @@ pl:
     thank_you_for_your_order: Dziękujemy za złożenie zamówienia. Potwierdzenie zostanie wysłane na podany adres email po zaksięgowaniu płatności.
     shipment_details: '%{shipping_method}'
     shipments: Wysyłka
+    register_transaction_error: Przepraszamy, wystąpił problem z zamówieniem. Prosimy spróbować ponownie.
