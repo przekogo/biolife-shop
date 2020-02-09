@@ -1,11 +1,16 @@
-<div id="spree-header">
+<div id="spree-header" class="js-rz-toggle">
   <header id="header" data-hook>
     <div class="container">
       <div class="row">
         <figure id="logo" class="col-md-4 col-sm-3" data-hook>
           <%= logo %>
-          <div id="logo-text">
+          <div id="logo-text" class="hidden-xs">
             <h4>sklep</h4>
+          </div>
+          <div class="visible-xs rz-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </figure>
         <%= render partial: 'spree/shared/nav_bar' %>
