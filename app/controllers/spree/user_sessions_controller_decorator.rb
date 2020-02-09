@@ -1,5 +1,5 @@
 Spree::UserSessionsController.class_eval do
-  before_action :set_categories, only: :new
+  before_action :set_categories
 
   private
 
